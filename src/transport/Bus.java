@@ -1,11 +1,15 @@
 package transport;
 
-public class Bus extends Transport {
+import java.io.Serializable;
+
+public class Bus extends Transport implements Serializable {
 
 
 
     public Bus(float fuelConsumption, String model, int price, String manufacturer){
-        super(model, manufacturer, fuelConsumption);
+        super.setModel(model);
+        super.setManufacturer(manufacturer);
+        super.setFuelConsumption(fuelConsumption);
         setPrice(price);
     }
 
